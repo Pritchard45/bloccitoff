@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @name = @user.name
   end
 
-  def user_proflie
-    redirect_to current_user
+  def after_sign_in_path_for(current_user)
+    current_user
   end
 
 end

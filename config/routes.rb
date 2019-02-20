@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
-  root to: 'users#user_proflie'
+  root to: 'welcome#index'
 end
