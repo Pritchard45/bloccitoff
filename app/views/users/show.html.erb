@@ -1,2 +1,7 @@
 <h1><%= @name %></h1>
 Email: <%= @user.email %>
+
+<h2> Add a Task </h2>
+  <%= render 'items/form' %>
+<h3> Active Tasks:</h3>
+  <%= render @items %>
