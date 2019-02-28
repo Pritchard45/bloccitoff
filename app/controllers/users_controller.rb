@@ -1,13 +1,8 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @name = @user.name
-    @items = @user.items
-    @item = Item.new
   end
 
-  def user_proflie
-    redirect_to current_user
-  end
-
+  
 end
